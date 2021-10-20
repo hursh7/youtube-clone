@@ -18,7 +18,6 @@ const SearchHeader = memo(
                 handleSearch();
             }
         };
-        console.log('Header!!');
         return (
             <header className={styles.header}>
                 <div className={styles.ci}>
