@@ -21,14 +21,17 @@ const SearchHeader = memo(
         return (
             <header className={styles.header}>
                 <div className={styles.ci}>
-                    <img className={styles.logo} src="/images/logo.png" alt="로고" />
-                    <p className={styles.youtube}>YouTube</p>
+                    <i className="fab fa-youtube"></i>
+                    <p className={styles.youtube}>JunTube</p>
                 </div>
                 <div className={styles.search}>
                     <input ref={inputRef} className={styles.input} type="search" placeholder="search.." onKeyPress={onKeyPress} />
                     <button className={styles.button} type="submit" onClick={onClick}>
-                        <img className={styles.img} src="/images/search.png" alt="검색버튼" />
+                        <i className="fas fa-search"></i>
                     </button>
+                </div>
+                <div className={styles.profile}>
+                    <i className="fas fa-user-circle"></i>
                 </div>
             </header>    
         )

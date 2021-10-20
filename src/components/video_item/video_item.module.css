@@ -1,24 +1,22 @@
 .container {
-    padding: 2em;
-}
-
-.container.basic {
-    width: 50%;
+    padding: 1rem;
 }
 
 .container.selected {
-    width: 100%;
+    padding: 0;
 }
 
 .video {
-    width: 100%;
+    width: 35rem;
     height: 100%;
     display: flex;
-    align-items: center;
-    border: 1px solid lightgray;
-    box-shadow: 3px 3px 5px 0 rgba(191, 191, 191, 0.53);
+    flex-direction: column;
     cursor: pointer;
     transition: transform 250ms ease-in;
+}
+
+.video.selected {
+   flex-direction: row;
 }
 
 .video:hover {
@@ -26,19 +24,22 @@
 }
 
 .thumbnail {
-    width: 40%;
-    height: 100%;
+    width: 100%;
+    height: 21.6rem;
+    margin-bottom: 1rem;
 }
 
-.metadata {
-    margin-left: 15em;
+.thumbnail.selected {
+    width: 16.8rem;
+    height: 9.8rem;
+    margin-right: 1rem;
 }
 
-.title, .channel {
-    margin: 0;
+.title {
     font-size: 1.6rem;
+    margin-bottom: 0.2rem;
 }
 
 .channelTitle {
-    font-size: 1rem;
+    font-size: 1.3rem;
 }

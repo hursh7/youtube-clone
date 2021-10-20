@@ -2,6 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    padding-left: 0;
-    margin: 0;
+}
+
+.videolist.basic {
+    justify-content: center;
+}
+
+.videolist.select {
+    justify-content: flex-start;
 }

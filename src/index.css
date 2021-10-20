@@ -13,9 +13,12 @@ code {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
   line-height: 1.285;
+  font-family: 'Roboto', sans-serif;
 }
 
 #root {
