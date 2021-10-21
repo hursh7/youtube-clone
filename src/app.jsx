@@ -18,6 +18,10 @@ function App({ youtube }) {
       .then(videos => setVideos(videos));
     }, [youtube]);
 
+  const reset = () => {
+    setSelectedVideo(null);
+  }
+
   useEffect(() => {
     youtube
     .mostPopular()
@@ -26,7 +30,7 @@ function App({ youtube }) {
 
   return (
     <div className={styles.app}>
-      <SearchHeader onSearch={search} />  
+      <SearchHeader onSearch={search} onReset={reset} />  
       <section className={styles.content}>
         {selectedVideo && (
           <div className={styles.detail}>

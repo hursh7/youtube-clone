@@ -2,15 +2,22 @@ import React, { memo, useRef } from 'react';
 import styles from './search_header.module.css';
 
 const SearchHeader = memo(
-    ({ onSearch }) => {
+    ({ onSearch, onReset }) => {
         const inputRef = useRef();
         const handleSearch =  () => {
             const value = inputRef.current.value;
             onSearch(value);
         };
+        const handleReset = () => {
+            onReset();
+        }
     
         const onClick = () => {
             handleSearch();
+        };
+
+        const onLogoClick = () => {
+            handleReset();
         };
     
         const onKeyPress = event => {
@@ -20,7 +27,7 @@ const SearchHeader = memo(
         };
         return (
             <header className={styles.header}>
-                <div className={styles.ci}>
+                <div className={styles.ci} onClick={onLogoClick}>
                     <i className="fab fa-youtube"></i>
                     <p className={styles.youtube}>JunTube</p>
                 </div>

@@ -4,7 +4,6 @@
     align-items: center;
     height: 8rem;
     padding: 0.8em 2em;
-    /* background-color: #999; */
     align-items: center;
     font-size: 1.6rem;
     width: 100%;
@@ -69,5 +68,21 @@
 .profile {
     font-size: 3.5rem;
     color: blueviolet;
+}
+
+@media screen and (max-width: 78rem) {
+    .profile {
+        display: none;
+    }
+
+    .search {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 42rem) {
+    .search {
+        width: 100%;
+    }
 }
 
