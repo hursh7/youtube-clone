@@ -11,3 +11,9 @@
 .videolist.select {
     justify-content: flex-start;
 }
+
+@media screen and (max-width: 78rem) {
+    .videolist {
+        margin-top: 3rem;
+    }
+}

@@ -4,7 +4,6 @@
     align-items: center;
     height: 8rem;
     padding: 0.8em 2em;
-    align-items: center;
     font-size: 1.6rem;
     width: 100%;
 }
@@ -81,6 +80,28 @@
 }
 
 @media screen and (max-width: 42rem) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        height: 10rem;
+    }
+
+    .ci {
+        justify-content: center;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .youtube {
+        letter-spacing: -1px;
+        font-size: 2.5rem;
+        margin-left: 0.3rem;
+        font-weight: 600;
+        color: #222;
+        user-select: none;
+    }
+    
+
     .search {
         width: 100%;
     }

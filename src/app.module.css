@@ -4,6 +4,7 @@
 
 .content {
   display: flex;
+  padding: 0 3rem;
 }
 
 .detail {
@@ -17,6 +18,13 @@
 @media screen and (max-width: 78rem) {
   .content {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 42rem) {
+  .content {
+    display: flex;
+    padding: 0 2rem;
   }
 }
 

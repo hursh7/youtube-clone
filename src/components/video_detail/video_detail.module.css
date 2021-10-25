@@ -1,22 +1,59 @@
 .detail {
-    padding-left: 15rem;
+    padding: 0 3rem;
+}
+
+.container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1rem;
 }
 
 .video {
-    margin-bottom: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .title {
     font-size: 2rem;
     font-weight: 500;
+    margin-bottom: 1rem;
 }
 
 .channelTitle {
     font-size: 1.6rem;
     font-weight: 400;
+    margin-bottom: 0.2rem;
 }
 
 .description {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     white-space: pre-wrap;
+}
+
+@media screen and (max-width: 42rem) {
+    .detail {
+      padding: 0;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    
+    .channelTitle {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-bottom: 0.2rem;
+    }
+    
+    .description {
+        font-size: 1.2rem;
+        white-space: pre-wrap;
+    }
 }
