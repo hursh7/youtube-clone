@@ -1,19 +1,19 @@
 .videolist {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
 }
 
 .videolist.basic {
-    justify-content: center;
+  justify-content: center;
 }
 
 .videolist.select {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 @media screen and (max-width: 78rem) {
-    .videolist {
-        margin-top: 3rem;
-    }
+  .videolist {
+    margin-top: 3rem;
+  }
 }

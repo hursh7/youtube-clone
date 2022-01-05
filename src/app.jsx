@@ -9,28 +9,28 @@ function App({ youtube }) {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const selectVideo = videoItem => {
-    setSelectedVideo(videoItem)
-  }
+    setSelectedVideo(videoItem);
+  };
 
-  const search = useCallback(query => {
+  const search = useCallback(
+    query => {
       setSelectedVideo(null);
-      youtube.search(query)
-      .then(videos => setVideos(videos));
-    }, [youtube]);
+      youtube.search(query).then(videos => setVideos(videos));
+    },
+    [youtube]
+  );
 
   const reset = () => {
     setSelectedVideo(null);
-  }
+  };
 
   useEffect(() => {
-    youtube
-    .mostPopular()
-    .then(videos => setVideos(videos));
+    youtube.mostPopular().then(videos => setVideos(videos));
   }, [youtube]);
 
   return (
     <div className={styles.app}>
-      <SearchHeader onSearch={search} onReset={reset} />  
+      <SearchHeader onSearch={search} onReset={reset} />
       <section className={styles.content}>
         {selectedVideo && (
           <div className={styles.detail}>
@@ -38,7 +38,11 @@ function App({ youtube }) {
           </div>
         )}
         <div className={styles.list}>
-          <VideoList videos={videos} onVideoClick={selectVideo} display= { selectedVideo ? 'selected' : 'basic' } />
+          <VideoList
+            videos={videos}
+            onVideoClick={selectVideo}
+            display={selectedVideo ? 'selected' : 'basic'}
+          />
         </div>
       </section>
     </div>
