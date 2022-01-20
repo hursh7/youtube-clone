@@ -42,6 +42,7 @@ function App({ youtube }) {
             videos={videos}
             onVideoClick={selectVideo}
             display={selectedVideo ? 'selected' : 'basic'}
+            // selectedVideo 가 있으면(videoItem을 클릭해서 videoDetail이 나타난 상태가 selected 기본상태가 basic)
           />
         </div>
       </section>
